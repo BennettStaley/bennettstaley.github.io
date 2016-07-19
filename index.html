@@ -1,14 +1,73 @@
-<!doctype html>
-
+<!DOCTYPE html>
+<html>
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  @font-face {
+    font-family: ocr;
+    src: url(ocr.ttf);
+}
+  #title, #subtitle, #BeerLyrics {
+    font-family: ocr;
+    text-align: center;
+  }
+  #BeerLyrics {
+    max-height: 150px;
+    text-color: green;
+    background-color: black;
+    list-style: none;
+    overflow: auto;
+    margin: 0 auto 50px auto;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid grey;
+    -webkit-box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+    box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+  }
+  #BeerLyrics li {
+    color: lime;
+  }
+  #Wrapper {
+    display: flex;
+    background-color: grey;
+    padding: 15px;
+    width: 325px;
+    margin: auto;
+    -webkit-box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+    box-shadow: -7px 10px 21px 0px rgba(0,0,0,0.41);
+  }
+  #InnerWrapper {
+    margin: 0 5px 0 5px;
+    display: block;
+  }
+    ul {
+      /*display: -webkit-inline-box;*/
+      text-align: center;
+      /*list-style: none;*/
+    }
+  </style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="beerApp.js" charset="utf-8"></script>
+  <title>Beer...?</title>
 </head>
-
 <body>
-    <div class="fullwrap">
-  <div class="mainlinks">
-<a href="goals.html" class="goals">Goals</a></br>
-<a href="worries.html" class="worries">Worries</a></br>
+  <h1 id="title">99 Bottles of Beer on the Wall</h1>
+  <h2 id="subtitle">something something... beer!</h2>
+  <ul id="BeerLyrics">
+  <li>99 bottles of beer on the wall!</li>
+    <li>-</li>
+  </ul>
+
+  <form>
+<div id="Wrapper">
+  <div id="InnerWrapper">
+    <input type="button" value="Restock!" id="Restock"/>
+    <input id="takeValue"/>
+    <input id="takeDown" type="button" value="Take em' down!">
   </div>
-    </div>
+</div>
+  </form>
 </body>
+</html>
