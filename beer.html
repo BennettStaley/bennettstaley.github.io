@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @font-face {
+            font-family: ocr;
+            src: url(ocr.ttf);
+        }
+
+        #title,
+        #subtitle,
+        #BeerLyrics {
+            font-family: ocr;
+            text-align: center;
+        }
+
+        #BeerLyrics {
+            max-height: 150px;
+            text-color: green;
+            background-color: black;
+            list-style: none;
+            overflow: auto;
+            margin: 0 auto 50px auto;
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            border: 2px solid grey;
+            -webkit-box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+            box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track-piece {
+                background-color: #FFF;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: #CBCBCB;
+                outline: 2px solid #FFF;
+                outline-offset: -2px;
+                border: .1px solid #B7B7B7;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #909090;
+            }
+        }
+
+        #BeerLyrics li {
+            color: lime;
+        }
+
+        #Wrapper {
+            display: flex;
+            background-color: grey;
+            padding: 15px;
+            width: 325px;
+            margin: auto;
+            -webkit-box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+            box-shadow: -7px 10px 21px 0px rgba(0, 0, 0, 0.41);
+        }
+
+        #InnerWrapper {
+            margin: 0 5px 0 5px;
+            display: block;
+        }
+
+        ul {
+            /*display: -webkit-inline-box;*/
+            text-align: center;
+            /*list-style: none;*/
+        }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="beerApp.js" charset="utf-8"></script>
+    <title>Beer...?</title>
+</head>
+
+<body>
+    <h1 id="title">99 Bottles of Beer on the Wall</h1>
+    <h2 id="subtitle">something something... beer!</h2>
+    <ul id="BeerLyrics">
+        <li>99 bottles of beer on the wall!</li>
+        <li>-</li>
+    </ul>
+
+    <form>
+        <div id="Wrapper">
+            <div id="InnerWrapper">
+                <input type="button" value="Restock!" id="Restock" />
+                <input id="takeValue" />
+                <input id="takeDown" type="button" value="Take em' down!">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
