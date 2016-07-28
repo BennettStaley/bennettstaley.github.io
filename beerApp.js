@@ -5,6 +5,7 @@ $(function(){
   var res = $('#Restock');
   var list = $('#BeerLyrics');
   var xBeer = 99;
+  console.log(takeDown);
 
 //function for bottle/bottleS
 var bottleString = function(num) {
